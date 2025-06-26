@@ -1,9 +1,9 @@
 const Joi = require('joi');
 
 const userSchema = Joi.object({
-  name: Joi.string().min(2).max(100).required(),
+  name: Joi.string().min(2).required(),
   email: Joi.string().email().required(),
-  age: Joi.number().integer().min(0).max(120).required()
+  age: Joi.number().integer().min(1).required()
 });
 
-module.exports = userSchema;
+module.exports = { userSchema };
